@@ -1,0 +1,21 @@
+{
+    "name": "SaveSync.PlayFab",
+    "rootNamespace": "SaveSync.PlayFabIntegration",
+    "references": [
+        "SaveSync.Core",
+        "PlayFab"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "Newtonsoft.Json.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "SAVESYNC_PLAYFAB"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

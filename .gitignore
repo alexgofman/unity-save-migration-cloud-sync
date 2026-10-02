@@ -1,0 +1,17 @@
+# Build output of the plain .NET test project
+DotnetTests~/bin/
+DotnetTests~/obj/
+TestResults/
+
+# Editors and operating systems
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+.DS_Store
+Thumbs.db
+
+# Unity skips folders whose names end in "~". Keep them in git even when a global "*~" rule is set.
+!DotnetTests~/
+!Samples~/

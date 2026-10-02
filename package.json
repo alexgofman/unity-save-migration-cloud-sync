@@ -1,0 +1,33 @@
+{
+  "name": "com.alexgofman.save-migration-cloud-sync",
+  "version": "0.1.0",
+  "displayName": "Save Migration & Cloud Sync",
+  "description": "Offline-first saves for Unity: versioned, idempotent migrations and a load-time sanitizer, a crash-safe local store, and a cloud backup with coalesced uploads, retry, timeouts and a restore that runs the same pipeline as a local load. The core is plain C# and is tested without the engine.",
+  "unity": "6000.0",
+  "keywords": [
+    "save",
+    "migration",
+    "cloud save",
+    "backup",
+    "playfab"
+  ],
+  "author": {
+    "name": "Alex Gofman"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "com.unity.nuget.newtonsoft-json": "3.2.1"
+  },
+  "samples": [
+    {
+      "displayName": "Demo Game",
+      "description": "An invented aquarium save with two migrations and a sanitizer, a bootstrap component that walks through a launch, a folder that stands in for the cloud, and tests for all of it.",
+      "path": "Samples~/DemoGame"
+    },
+    {
+      "displayName": "PlayFab CloudScript: account deletion",
+      "description": "A legacy CloudScript handler that lets a signed-in player delete their own account. Placeholders only; review before deploying.",
+      "path": "Samples~/PlayFabCloudScript"
+    }
+  ]
+}

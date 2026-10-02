@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Runs the engine-free part of the package with plain `dotnet test`, so the tests need no
+    Unity installation or licence. Sources are linked from the package folders, not copied.
+    LangVersion matches what Unity 6000.0 compiles, so newer syntax cannot slip in unnoticed.
+  -->
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>9.0</LangVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+    <RootNamespace>SaveSync</RootNamespace>
+    <AssemblyName>SaveSync.DotnetTests</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="../Runtime/Core/**/*.cs" Link="Runtime/Core/%(RecursiveDir)%(Filename)%(Extension)" />
+    <Compile Include="../Tests/Editor/**/*.cs" Link="Tests/Editor/%(RecursiveDir)%(Filename)%(Extension)" />
+    <Compile Include="../Samples~/DemoGame/State/**/*.cs" Link="Samples/DemoGame/State/%(RecursiveDir)%(Filename)%(Extension)" />
+    <Compile Include="../Samples~/DemoGame/Cloud/**/*.cs" Link="Samples/DemoGame/Cloud/%(RecursiveDir)%(Filename)%(Extension)" />
+    <Compile Include="../Samples~/DemoGame/Tests/Editor/**/*.cs" Link="Samples/DemoGame/Tests/%(RecursiveDir)%(Filename)%(Extension)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="NUnit" Version="3.14.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.6.0" />
+  </ItemGroup>
+
+</Project>
